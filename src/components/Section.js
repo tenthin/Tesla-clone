@@ -8,6 +8,7 @@ function Section() {
                 <h1>Model S</h1>
                 <p>Order Online for Touchless Delivery</p>
             </ItemText>
+            <Buttons>
             <ButtonGroup>
                 <LeftButton>
                     Custom Order
@@ -17,11 +18,13 @@ function Section() {
                 </RightButton>
             </ButtonGroup>
             <DownArrow src="/images/down-arrow.svg"/>
+            </Buttons>
         </Wrap>
     )
 }
 
 export default Section;
+
 
 const Wrap = styled.div`
     width: 100vw;
@@ -56,6 +59,7 @@ const LeftButton = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     cursor:pointer;
+    margin: 8px;
 `
 const RightButton = styled(LeftButton)`
 
@@ -64,4 +68,10 @@ const RightButton = styled(LeftButton)`
 const DownArrow = styled.img`
     margin-top: 20px;
     height: 40px;
+    overflow-x: hidden;
+    animation: animateDown infinite 1.5s;
+`
+
+const Buttons = styled.div`
+
 `
