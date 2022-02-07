@@ -13,9 +13,12 @@ function Section({title,description,leftBtnText,rightBtnText,backgroundImg}) {
                 <LeftButton>
                     {leftBtnText}
                 </LeftButton>
-                <RightButton>
-                    {rightBtnText}
-                </RightButton>
+                {rightBtnText && 
+                    <RightButton>
+                        {rightBtnText}
+                    </RightButton>
+                }
+
             </ButtonGroup>
             <DownArrow src="/images/down-arrow.svg"/>
             </Buttons>
@@ -32,7 +35,7 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/model-s.jpg');
+    // background-image: url('/images/model-s.jpg');
     display: flex;
     flex-direction: column;
     justify-content: space-between; //vertical
